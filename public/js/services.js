@@ -19,7 +19,7 @@ angular.module('myApp.services', []).
 				});
 			},
 			emit: function(eventName, data, callback) {
-				socket.emit(eventName, function() {
+				socket.emit(eventName, data function() {
 					var args = arguments;
 					$rootScope.$apply(function() {
 						if (callback) {
